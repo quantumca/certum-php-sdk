@@ -1,0 +1,164 @@
+List of changes in the Certum Partner API Library
+
+### version 2.20.0 (2021-11-29) ###
+* Change errors descriptions
+* Fix errors descriptions
+
+### version 2.19.0 (2021-08-24) ###
+
+* Remove field verificationPhoneNumber from request
+* Change name of variable from typeParsedCsr.php
+* Add ADMIN to typeVerificationMethodType
+* Removed ID parameter from request and response of operation VerifyOrder
+* Removed method GetDomainVerification
+* Removed method ChangeApprovers
+* Removed method VerifyDomain
+* Removed method SendNotifications
+* Removed method GetApproverList
+* Removed method UpdateDocuments
+* New document types added to typeDocumentTypeEnum
+* Added AUTHORIZATION to typeOrderVerificationTypeEnum
+* Added new error code
+
+### version 2.18.0 (2021-05-19) ###
+
+* Added field shortenedValidityPeriod to quickOrder and renewCertificate requests
+
+### version 2.17.0 (2021-04-28) ###
+
+* Added new document types
+
+### version 2.16.0 (2021-04-07) ###
+
+* Added new error codes
+
+### version 2.15.0 (2021-02-01) ###
+
+* Added new error codes
+
+### version 2.14.0 (2020-12-14) ###
+
+* Removed field email from request for operation renewCertificate
+* Added field userAgent to renewCertificate and reissueCertificate requests
+
+### version 2.13.1 (2020-12-14) ###
+
+* Added field revocationContactEmail to quickOrder and renewCertificate requests
+
+### version 2.13.0 (2020-08-10) ###
+
+* Field defaultHashAlgorithm in response of getProductList operation has been deleted
+* Field verificationNotificationEnabled in response of getProductList operation has been deleted
+
+### version 2.12.0 (2020-07-27) ###
+
+* Added missing methods of ValidateOrderParameters operation to handle one-code verification
+* Changed field name 'approveMethod' to 'approverMethod'
+* Fixed error about missing field during any operation invocation
+* Changed getSanVerification operation - return negative internal verifications
+* Added missing status codes and their descriptions
+* getOrderState operation - changed verification type INTERNAL to SYSTEM
+* getSanVerification operation - removed verification type ALEXA and GOOGLE_SAFE_LOOKUP, added TOP_SITES and GOOGLE_SAFE_BROWSING
+
+### version 2.11.0 (2020-07-09) ###
+
+* Added operation AddSanVerification
+* Added operation AddEmailVerification
+
+### version 2.9.0 (2020-06-10) ###
+
+* Changed QuickOrder operation to handle one-code verification
+* Changed RenewCertificate operation to handle one-code verification
+* Changed ReissueCertificate operation to handle one-code verification
+* Changed ValidateOrderParameters operation to handle one-code verification
+* Added operation GetSanVerificationState
+* Added operation PerformSanVerification
+
+### version 2.6.1 (2020-06-04) ###
+
+* Added EV fields to ValidateOrderParameters operation.
+
+### version 2.6.0 (2020-06-01) ###
+
+* Fixed returning incomplete verification data by various endpoints.
+
+### version 2.4.0 (2020-04-03) ###
+
+* Updated error codes
+
+### version 2.3.0 (2020-03-18) ###
+
+* Operation getStatement has been removed
+* Operation getConfiguration has been removed
+
+### wersja 1.24.0 (2019-12-17) ###
+
+* New operation getOrderState has been added (see the example file getOrderState.php)
+* Added new EV fields in orderParameters
+
+### version 1.21.0 (2019-11-08) ###
+
+* Deprecated API fields removed
+
+### version 1.19.0 (2019-10-14) ###
+
+* Test and Prod URI's update
+
+### version 1.7.15 (2018-03-26) ###
+
+* Added additional types of document variables (const variables)
+
+### version 1.7.3 (2017-03-09) ###
+
+* redundant exception while using organizationInfo without verificationPhoneNumber has been deleted.
+* overriding commonName from CSR has been fixed.
+* method sendNotifications has been fixed.
+
+### version 1.7.2 (2017-02-22) ###
+
+* section organizationInfo has been modified. New optional parameter verificationPhoneNumber may be used for phone verification method.
+* section orderParameters has been modified for quickOrder and validateOrderParameters which provide new feature - overriding CSR fields. 
+* It is possible to override these fields now: commonName, organization, organizationalUnit, locality, country, state.(check examples: XXX-overridedCSR, where XXX is method name)
+
+### version 1.5.20 (2015-11-10) ###
+
+* an optional email parameter has been added to quickOrder, validateOrderParameters and renewCertificate operations
+
+### version 1.5.18 (2015-11-06) ###
+
+* the operation getCertificate has been modified, a complete certificate path is now returned
+* the operation getDomainVerification has been modified, new option for getting all verification methods is added
+* the operation getOrderByOrderID has been modified, an order can contain information if it is a reissue
+* the operation getProductList has been modified, a product data can contain default and accepted hash functions
+* the operation modifySNICertificate has been modified, a request can contain a chosen hash function for a certificate
+* the operation orderSNICertificate has been modified, a request can contain a chosen hash function for a certificate
+* the operation quickOrder has been modified, a request can contain a chosen hash function for a certificate
+* the operation renewCertificate has been modified, a request can contain a chosen hash function for a certificate
+* the operation validateOrderParameters has been modified, a request can contain a chosen hash function for a certificate
+* the operation getEmailVerification has been added
+* the operation reissueCertificate has been added
+* CERTIFICATEHOLD is no longer a valid revocation reason
+
+### version 1.4.1 (2014-03-10) ###
+
+* new operation updateDocuments has been added (see the example file updateDocuments.php)
+* new enumeration type documentTypeEnum has been added
+* the operation verifyOrder has been modified, now input data can contain documents and can return document identifiers (see the example file verifyOrder.php)
+* the operation getApproverList has been modified, now returned data determine a main domain (see the example file getApproverList.php)
+
+### version 1.3.4 (2013-08-22) ###
+
+* the operation getVerifications is removed
+* the operation getExpiringCertificates is added
+* the operation verifyOrder is added
+* the operation orderSNICertificate is added
+* the operation modifySNICertificate is added
+* data returned from the operation getDomainVerification are changed (see the example file getDomainVerification.php)
+* input data for the operation sendNotifications can contain new optional parameter verificationNotificationEnabled
+* the operation sendNotifications can return domains verification information (see the example file sendNotifications.php)
+* input data for the operation changeApprovers can contain new optional parameter verificationNotificationEnabled
+* the operation changeApprovers can return domain verification information (see the example file changeApprovers.php)
+
+### version 1.3.0 (2013-06-11) ###
+
+* initial release of the library

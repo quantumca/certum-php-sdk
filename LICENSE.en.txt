@@ -1,0 +1,47 @@
+By installing the Certum Partner API Library or possessing data storage media on which it is installed, you are consenting to be bound by all terms of this license. If you do not agree to any of the terms of this license, then do not install or use neither whole Certum Partner API Library, in whole or in part.
+
+Asseco Data Systems S.A. Headquarters: ul. Jana z Kolna 11, 80-864 Gdañsk/Poland. Tax Identification Number (NIP): 517-035-94-58. Statistical ID number (REGON): 180853177. National Court Register: 0000421310 District Court in Gdañsk – Pó³noc in Gdañsk, VIII Commercial Department of the National Court Register. Share capital: PLN 120 002 940.00 (fully paid)
+grants license for use the Certum Partner API Library upon the following terms:
+
+§ 1
+DEFINITIONS
+The terms used in this license have following meaning:
+a) ADS, Licensor – Asseco Data Systems S.A; 
+b) Licensee – natural person, legal person or entity possessing legal personality, who is participate in the ADS Partnership Program and has concluded the agreement of Partnership Program,  
+c) Software – Certum Partner API Library, 
+d) Partnership Program – commercial program led by ADS whose aiming is agency and promotion by Licensee of products and services sold by ADS.
+
+§ 2
+LICENSE RULES
+ADS grantes for the duration of participation in the Partnership Program Licensee, and Licensee acquires, non-exclusive, non-transfer, are not subject to a separate sublicensable, royalty-free right to use the Software Licensor only for personal use.
+
+§ 3
+LICENSE LIMITATIONS
+1. It is forbidden to use the Software in a way that is against law. In particular it is forbidden to:
+ 1) use the Software by other users than employees or authorized representatives of Licensee;
+ 2) distribution the Software;
+ 3) remove or change any trademarks or information about products placed in the Software.
+2. Licensee have right to:
+ 1) translate, make adjustments, change structure or modify the Software for their own use.
+3. The execution of any changes means infringement of ADS copyright as well as infringement of the terms of the license and will be prosecuted according to law regulations.
+
+§ 4
+LICENSOR DECLARATION
+1. The ADS declares that the Software  is free from viruses and other functions which could cause on purpose the damages of data, storage media or the equipment.
+2. The ADS does not warrant that the Software has no defects or errors and does not warrant that the Software  will always operate without any failures in all installation environments and cooperate with software of other producers.
+3. ADS is not responsible for the content of the documents signed and granted by the Software.
+4. ADS is not liable for any damage to Licensee caused by incorrect configuration Software.
+5. The responsibility of the ADS for possible damages resulting from the usage of the software or connected with this usage as well as damages resulting from services provided by the ADS is limited to the height of really carried and proved damages.
+
+§ 5
+WITHDRAWAL FROM THE LICENSE
+Regardless of any other regulations the license agreement can be withdrawn by a writing executed by ADS, if the Licensee does not comply with the license provisions. In such case the Licensee is obliged to destroy all copies of the Software and all its components and delete Software from Licensee’s IT System or return them to ADS.
+
+§ 6
+RIGHTS RESERVATION AND POSSESSION
+ADS reserves all property rights and copyrights resulting from binding regulations with the exception of rights expressly granted to Licensee in the license agreement. The Software  is protected by the copyright law and by other acts and agreements on protection of intellectual property. The ownership rights, copyright laws and other intellectual property rights belong to the ADS in compliance with the Polish and international law. Software  is licensed, not sold. The ADS does not grant the Licensee by virtue of this license to use any trade and service marks of the ADS. It is allowed to use the name of the Software  on Internet sites of Licensee on condition that the mark of copyrights, which are in the possession of the ADS, will be published, as well as the reference to Internet site of the ADS - https://www.certum.pl.
+
+§ 7
+FINAL PROVISIONS
+1. To the matters not provided for herein the provisions of the Civil Code as well as acts on copyrights and derivate rights will be applicable.
+2. Any disputes arising herefrom will be settled out of court. If the parts do not settle the dispute in 3 months since the dispute was started, the dispute will be settled by competent court seated in the place proper for the ADS, in the manner and under the terms of civil and criminal law.

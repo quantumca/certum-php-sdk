@@ -1,0 +1,21 @@
+{
+    "name": "certum/sdk",
+    "description": "Certum(Asseco Data Systems) SDK for ssl products.",
+    "type": "library",
+    "require": {
+        "php": ">=5.6"
+    },
+    "license": "SEE LICENSE.en.txt",
+    "autoload": {
+        "psr-4": {
+            "Certum\\Sdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Xiaohui Lam",
+            "email": "xiaohui.lam@icloud.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

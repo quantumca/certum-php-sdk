@@ -1,0 +1,5 @@
+./vendor
+.bak
+.test
+.DS_Store
+Thumbs.db
