@@ -5,7 +5,7 @@
     "require": {
         "php": ">=5.6"
     },
-    "license": "SEE LICENSE.en.txt",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "Certum\\Sdk\\": "src/"
