@@ -30,44 +30,43 @@ use SoapFault;
 
 /**
  * Partner API Library
- * 
+ *
  * @copyright Copyright (c) 2020 Asseco Data Systems SA
  * @license license.txt
  */
 
 /**
  * This class represents a Partner API WebService.
- * 
+ *
  * When constructing an object of this type you have to pass proper
  * user name and password as arguments. Optionally, you may specify a URL
  * for a WSDL file of a web service as the third argument. The fourth argument
  * can be used to specify a language used for some localized texts.
- * 
+ *
  * @package service
  */
 class PartnerAPIService
 {
-
     /**
      * A constant field containing URL to a WSDL file in a testing web service
-     * 
+     *
      * @var string
      */
     const WSDL_TEST = 'https://gs.test.certum.pl/service/PartnerApi.wsdl';
 
     /**
      * A constant field containing URL to a WSDL file in a production web service
-     * 
+     *
      * @var string
      */
     const WSDL_PROD = 'https://gs.certum.pl/service/PartnerApi.wsdl';
 
     /**
      * List of available languages used for some localized messages.
-     * 
+     *
      * It is a list of two-letter language codes joined with a semicolon.
      * Currently only two languages are supported: English and Polish.
-     * 
+     *
      * @var string
      */
     const LANGS = 'en;pl';
@@ -77,28 +76,28 @@ class PartnerAPIService
 
     /**
      * A URL of currently used web service.
-     * 
+     *
      * @var string
      */
-    private $_wsdl = NULL;
+    private $_wsdl = null;
 
     /**
      * A current language code.
-     * 
+     *
      * @var string
      */
-    private $_lang = NULL;
+    private $_lang = null;
 
     /**
      * A user name used for authentication in the Partner API Service.
-     * 
+     *
      * @var string
      */
     private $_userName = '';
 
     /**
      * A password used for authentication in the Partner API Service.
-     * 
+     *
      * @var string
      */
     private $_password = '';
@@ -108,26 +107,26 @@ class PartnerAPIService
     /**
      * Indicates if SoapFault exceptions should be passed or catched.
      * If they are catched they are rethrown as PartnerAPIException.
-     * 
+     *
      * @var boolean
      */
-    private $_catchSoapFault = FALSE;
+    private $_catchSoapFault = false;
 
     /**
      * Indicates if debugging information should be writeten to a file.
-     * 
+     *
      * If set to NULL, no debugging information will be stored anywhere.
      * Otherwise, $_debugFile should contain a file name or a URL supported by PHP.
-     * 
+     *
      * @var string
      */
-    private $_debugFile = NULL;
+    private $_debugFile = null;
 
     // ========================================================================
 
     /**
      * The constructor.
-     * 
+     *
      * The $userName and $password arguments are required. They are used
      * as credentials data in the Partner API WebService.
      * So, creating an object of this class you have to pass your user name
@@ -136,13 +135,13 @@ class PartnerAPIService
      * to the testing web service using the URL defined in the WSDL_TEST field.
      * The fourth argument $lang is also optional. If given it must match one
      * of language codes in the LANGS constant field. Otherwise 'en' is used.
-     * 
+     *
      * @param string $userName
      * @param string $password
      * @param string|null $wsdl Default: NULL
      * @param string $lang Default: en
      */
-    public function __construct($userName = '', $password = '', $wsdl = NULL, $lang = 'en')
+    public function __construct($userName = '', $password = '', $wsdl = null, $lang = 'en')
     {
         $this->setUserName($userName);
         $this->setPassword($password);
@@ -164,7 +163,7 @@ class PartnerAPIService
 
     /**
      * Returns the user name
-     * 
+     *
      * @return string
      */
     public function getUserName()
@@ -174,7 +173,7 @@ class PartnerAPIService
 
     /**
      * Sets the user name to be used for authentication in a web service.
-     * 
+     *
      * @param string $userName
      * @return PartnerAPIService The object being called
      */
@@ -186,7 +185,7 @@ class PartnerAPIService
 
     /**
      * Returns the password
-     * 
+     *
      * @return string
      */
     public function getPassword()
@@ -196,7 +195,7 @@ class PartnerAPIService
 
     /**
      * Sets the password to be used for authentication in a web service.
-     * 
+     *
      * @param string $password
      * @return PartnerAPIService The object being called
      */
@@ -208,7 +207,7 @@ class PartnerAPIService
 
     /**
      * Returns current language
-     * 
+     *
      * @return string
      */
     public function getLang()
@@ -218,22 +217,23 @@ class PartnerAPIService
 
     /**
      * Sets the current language
-     * 
+     *
      * @param string $lang
      * @return PartnerAPIService The object being called
      */
     public function setLang($lang)
     {
         $langarray = explode(';', PartnerAPIService::LANGS);
-        if (!in_array($lang, $langarray))
+        if (!in_array($lang, $langarray)) {
             $lang = 'en';
+        }
         $this->_lang = $lang;
         return $this;
     }
 
     /**
      * Returns current URL for a WSDL file.
-     * 
+     *
      * @return string
      */
     public function getWSDL()
@@ -243,24 +243,25 @@ class PartnerAPIService
 
     /**
      * Sets the current URL for a WSDL file.
-     * 
+     *
      * @param string|null $wsdl
      * @return PartnerAPIService The object being called
      */
     public function setWSDL($wsdl)
     {
-        if (is_null($wsdl))
+        if (is_null($wsdl)) {
             $this->_wsdl = PartnerAPIService::WSDL_TEST;
-        else
+        } else {
             $this->_wsdl = (string) $wsdl;
+        }
         return $this;
     }
 
     /**
      * Configures the service to pass or to catch SoapFault exceptions.
-     * 
+     *
      * If SoapFault exceptions are catched they are rethrown as PartnerAPIException.
-     * 
+     *
      * @param boolean $yes_or_no
      * @return PartnerAPIService
      */
@@ -272,7 +273,7 @@ class PartnerAPIService
 
     /**
      * Tells if SoapFault exceptions are passed or catched.
-     * 
+     *
      * @return boolean True if SoapFault exceptions are catched, False otherwise
      */
     public function getCatchSoapFault()
@@ -291,7 +292,7 @@ class PartnerAPIService
      * @return PartnerAPIService
      * @throws PartnerAPIException
      */
-    public function setDebugFile($fname = NULL)
+    public function setDebugFile($fname = null)
     {
         if (!(is_null($fname) || is_string($fname))) {
             throw new PartnerAPIException("Invalid file name. It should be a string or null.");
@@ -305,9 +306,9 @@ class PartnerAPIService
 
     /**
      * Return a file name for writing debug information.
-     * 
+     *
      * It can also return null if no file name has been set.
-     * 
+     *
      * @return string|null A file name
      */
     public function getDebugFile()
@@ -319,7 +320,7 @@ class PartnerAPIService
     public function getMethod() {
         return $this->_method;
     }
-    
+
     public function setMethod($method) {
         if ($method == PartnerAPIService::METHOD_SOAP) {
             if (class_exists('SoapClient'))
@@ -343,7 +344,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the validateOrderParameters operation.
-     * 
+     *
      * @return PartnerAPIOperationValidateOrderParameters
      */
     public function operationValidateOrderParameters()
@@ -355,7 +356,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the quickOrder operation.
-     * 
+     *
      * @return PartnerAPIOperationQuickOrder
      */
     public function operationQuickOrder()
@@ -367,7 +368,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the getOrderByOrderID operation.
-     * 
+     *
      * @return PartnerAPIOperationGetOrderByOrderID
      */
     public function operationGetOrderByOrderID()
@@ -379,7 +380,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the getOrderByOrderID operation.
-     * 
+     *
      * @return PartnerAPIOperationGetOrderByOrderID
      */
     public function operationGetOrdersByDateRange()
@@ -391,7 +392,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the getModifiedOrders operation.
-     * 
+     *
      * @return PartnerAPIOperationGetModifiedOrders
      */
     public function operationGetModifiedOrders()
@@ -403,7 +404,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the cancelOrder operation.
-     * 
+     *
      * @return PartnerAPIOperationCancelOrder
      */
     public function operationCancelOrder()
@@ -415,7 +416,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the getProductList operation.
-     * 
+     *
      * @return PartnerAPIOperationGetProductList
      */
     public function operationGetProductList()
@@ -427,7 +428,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the getConfiguration operation.
-     * 
+     *
      * @return PartnerAPIOperationGetConfiguration
      */
     public function operationGetConfiguration()
@@ -439,7 +440,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the getCertificate operation.
-     * 
+     *
      * @return PartnerAPIOperationGetCertificate
      */
     public function operationGetCertificate()
@@ -451,7 +452,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the renewCertificate operation.
-     * 
+     *
      * @return PartnerAPIOperationRenewCertificate
      */
     public function operationRenewCertificate()
@@ -463,7 +464,7 @@ class PartnerAPIService
 
     /**
      * Returns an object representing the revokeCertificate operation.
-     * 
+     *
      * @return PartnerAPIOperationRevokeCertificate
      */
     public function operationRevokeCertificate()
@@ -609,7 +610,7 @@ class PartnerAPIService
 
     /**
      * This method invokes a given operation in the Partner API WebService
-     * 
+     *
      * This method is used for communication with the service. It sends the data
      * passed in the $data argument to the service and invokes the operation specified
      * in the $operation argument. It uses a WSDL file defined as the current WSDL file
@@ -619,15 +620,15 @@ class PartnerAPIService
      * and values are subsequent arrays. The subsequent arrays contain all passed elements.
      * A subsequent array's key is an element's name and value is a scalar value,
      * an array of scalar values or an array of further elements.
-     * 
+     *
      * This method can write debugging information to a file (see the setDebugFile() method).
      * This information is stored in a file only after a successful call to a service.
-     * 
+     *
      * Although it is possible, it is not intended this method to be called directly
      * by a user. It is invoked by operation objects.
-     * 
+     *
      * It returns an object containg all returned data from the service.
-     * 
+     *
      * @param string $operation The operations to be called
      * @param array $data The data to be passed to the operation
      * @return object
@@ -656,7 +657,7 @@ class PartnerAPIService
 
     /**
      * Writes debugging information to a file.
-     * 
+     *
      * @param string $operation Operation invoked
      * @param array $data Data sent
      * @param array|string|object $r Response data

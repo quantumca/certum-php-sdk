@@ -1,0 +1,53 @@
+<?php
+
+namespace Certum\Sdk\Types;
+
+/**
+ * Partner API Library
+ *
+ * @copyright Copyright (c) 2020 Asseco Data Systems SA
+ * @license license.txt
+ */
+
+
+/*
+<xs:complexType name="getCertificateResponse">
+    <xs:complexContent>
+        <xs:extension base="tns:response">
+            <xs:sequence>
+                <xs:element minOccurs="0" name="certificateDetails" type="tns:certificateDetails"/>
+                <xs:element minOccurs="0" name="caBundle" type="tns:caBundle"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+*/
+
+/**
+ * This class represents the getCertificateResponse WSDL type.
+ *
+ * It is an extension to the PartnerAPITypeResponse class.
+ *
+ * @method PartnerAPITypeGetCertificateResponse setCertificateDetails(PartnerAPITypeCertificateDetails $value) Sets the certificateDetails element.
+ * @method PartnerAPITypeCertificateDetails getCertificateDetails() Gets the certificateDetails element or NULL.
+ * @property PartnerAPITypeCertificateDetails $certificateDetails Gets the certificateDetails element or NULL.
+ *
+ * @method PartnerAPITypeGetCertificateResponse setCaBundle(PartnerAPITypeCaBundle $value) Sets the caBundle element.
+ * @method PartnerAPITypeCaBundle getCaBundle() Gets the caBundle element or NULL.
+ * @property PartnerAPITypeCaBundle $caBundle Gets the caBundle element or NULL.
+ *
+ * @package types
+ */
+class PartnerAPITypeGetCertificateResponse extends PartnerAPITypeResponse
+{
+    protected function initData()
+    {
+        $p = parent::initData();
+        $n = array(
+            'certificateDetails' => array('min' => 0, 'max' => 1, 'value' => null, 'type' => 'PartnerAPITypeCertificateDetails', 'nillable' => false),
+            'caBundle'           => array('min' => 0, 'max' => 1, 'value' => null, 'type' => 'PartnerAPITypeCaBundle', 'nillable' => false)
+        );
+        $n = array_merge($p, $n);
+        return $n;
+    }
+}
