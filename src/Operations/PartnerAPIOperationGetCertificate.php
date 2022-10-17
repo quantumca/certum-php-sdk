@@ -11,6 +11,8 @@ namespace Certum\Sdk\Operations;
 
 use Certum\Sdk\Messages\PartnerAPIMessageGetCertificate;
 use Certum\Sdk\Messages\PartnerAPIMessageGetCertificateResponse;
+use Certum\Sdk\Types\PartnerAPITypeCaBundle;
+use Certum\Sdk\Types\PartnerAPITypeCertificateDetails;
 
 /*
 <operation name="getCertificate" parameterOrder="getCertificate">
@@ -36,11 +38,13 @@ class PartnerAPIOperationGetCertificate extends PartnerAPIOperation
      * @var PartnerAPIMessageGetCertificate
      */
     protected $_input = null;
-/**
+
+    /**
      * @var PartnerAPIMessageGetCertificateResponse
      */
     protected $_output = null;
-/**
+
+    /**
      * @var string
      */
     protected $_operation = 'getCertificate';

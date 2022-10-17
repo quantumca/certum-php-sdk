@@ -34,7 +34,7 @@ namespace Certum\Sdk\Types;
  *
  * @method PartnerAPITypeResponseHeader setErrors(PartnerAPITypeErrors $value) Sets the errors element.
  * @method PartnerAPITypeErrors getErrors() Gets the errors element or NULL.
- * @property PartnerAPITypeErrors $errors Gets the errors element or NULL.
+ * @property PartnerAPITypeErrors|null $errors Gets the errors element or NULL.
  *
  * @method PartnerAPITypeResponseHeader setPagesCount(int $value) Sets the pagesCount element.
  * @method int getPagesCount() Gets the pagesCount element or NULL.

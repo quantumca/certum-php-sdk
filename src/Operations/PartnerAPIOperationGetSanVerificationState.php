@@ -11,6 +11,7 @@ namespace Certum\Sdk\Operations;
 
 use Certum\Sdk\Messages\PartnerAPIMessageGetSanVerificationState;
 use Certum\Sdk\Messages\PartnerAPIMessageGetSanVerificationStateResponse;
+use Certum\Sdk\Types\PartnerAPITypeSanVerificationState;
 
 /*
 <operation name="getSanVerificationState" parameterOrder="getSanVerificationState">

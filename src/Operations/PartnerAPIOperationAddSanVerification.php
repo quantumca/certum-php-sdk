@@ -12,6 +12,7 @@ namespace Certum\Sdk\Operations;
 use Certum\Sdk\Messages\PartnerAPIMessageAddSanVerification;
 use Certum\Sdk\Messages\PartnerAPIMessageAddSanVerificationResponse;
 use Certum\Sdk\Types\PartnerAPITypeSanApprover;
+use Certum\Sdk\Types\PartnerAPITypeSanVerification;
 
 /*
 <operation name="addSanVerification" parameterOrder="addSanVerification">
@@ -37,11 +38,13 @@ class PartnerAPIOperationAddSanVerification extends PartnerAPIOperation
      * @var PartnerAPIMessageAddSanVerification
      */
     protected $_input = null;
-/**
+
+    /**
      * @var PartnerAPIMessageAddSanVerificationResponse
      */
     protected $_output = null;
-/**
+
+    /**
      * @var string
      */
     protected $_operation = 'addSanVerification';

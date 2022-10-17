@@ -12,6 +12,7 @@ namespace Certum\Sdk\Operations;
 use Certum\Sdk\Messages\PartnerAPIMessageRenewCertificate;
 use Certum\Sdk\Messages\PartnerAPIMessageRenewCertificateResponse;
 use Certum\Sdk\Types\PartnerAPITypeSanApprover;
+use Certum\Sdk\Types\PartnerAPITypeSanVerification;
 
 /*
 <operation name="renewCertificate" parameterOrder="renewCertificate">
@@ -37,11 +38,13 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * @var PartnerAPIMessageRenewCertificate
      */
     protected $_input = null;
-/**
+
+    /**
      * @var PartnerAPIMessageRenewCertificateResponse
      */
     protected $_output = null;
-/**
+
+    /**
      * @var string
      */
     protected $_operation = 'renewCertificate';
@@ -63,7 +66,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * This option determines which approve method will be used for domain verification.
      *
      * @param string $approverMethod
-     * @return PartnerAPIOperationQuickOrder
+     * @return $this
      */
     public function setApproverMethod($approverMethod)
     {
@@ -83,7 +86,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * This method cannot be used with EMAIL approve method.
      *
      * @param string $approverEmail
-     * @return PartnerAPIOperationQuickOrder
+     * @return $this
      */
     public function setApproverEmail($approverEmail)
     {
@@ -103,7 +106,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * This method cannot be used with FILE or DNS approve method.
      *
      * @param string $approverEmailPrefix
-     * @return PartnerAPIOperationQuickOrder
+     * @return $this
      */
     public function setApproverEmailPrefix($approverEmailPrefix)
     {
@@ -122,7 +125,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * This option determines if verification e-mails for all approvers will be sent or not.
      *
      * @param boolean $yes_or_no
-     * @return PartnerAPIOperationQuickOrder
+     * @return $this
      */
     public function setVerificationNotificationEnabled($yes_or_no)
     {
@@ -141,7 +144,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * Setting this value is required.
      *
      * @param string $csr
-     * @return PartnerAPIOperationRenewCertificate
+     * @return $this
      */
     public function setCSR($csr)
     {
@@ -155,7 +158,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * Setting this value is required.
      *
      * @param string $customer
-     * @return PartnerAPIOperationRenewCertificate
+     * @return $this
      */
     public function setCustomer($customer)
     {
@@ -169,7 +172,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * Setting this value is required.
      *
      * @param string $productCode
-     * @return PartnerAPIOperationRenewCertificate
+     * @return $this
      */
     public function setProductCode($productCode)
     {
@@ -184,7 +187,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * of them may be set. Setting both values is an error.
      *
      * @param string $serialNumber
-     * @return PartnerAPIOperationRenewCertificate
+     * @return $this
      */
     public function setSerialNumber($serialNumber)
     {
@@ -199,7 +202,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * of them may be set. Setting both values is an error.
      *
      * @param string $x509cert
-     * @return PartnerAPIOperationRenewCertificate
+     * @return $this
      */
     public function setX509Cert($x509cert)
     {
@@ -211,7 +214,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * Sets a hash algorithm to be used.
      *
      * @param string $hashAlgorithm
-     * @return PartnerAPIOperationRenewCertificate
+     * @return $this
      */
     public function setHashAlgorithm($hashAlgorithm)
     {
@@ -223,7 +226,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * Sets the userAgent for the request
      *
      * @param string $userAgent
-     * @return PartnerAPIOperationRenewCertificate
+     * @return $this
      */
     public function setUserAgent($userAgent)
     {
@@ -238,7 +241,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * we will contact you using provided email.
      *
      * @param string $revocationContactEmail Contact email used in certificate's revocation process
-     * @return PartnerAPIOperationRenewCertificate
+     * @return $this
      */
     public function setRevocationContactEmail($revocationContactEmail)
     {
@@ -253,7 +256,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      * In that case please specify your requested certificate's expiration date within product's allowed validity range.
      *
      * @param string $shortenedValidityPeriod Custom certificate's expiration date
-     * @return PartnerAPIOperationQuickOrder
+     * @return $this
      */
     public function setShortenedValidityPeriod($shortenedValidityPeriod)
     {
@@ -264,7 +267,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
     /**
      * Gets an order ID returned in a response.
      *
-     * @return string
+     * @return string|null
      */
     public function getOrderID()
     {
@@ -276,7 +279,7 @@ class PartnerAPIOperationRenewCertificate extends PartnerAPIOperation
      *
      * If there is no verification in the response a NULL is returned.
      *
-     * @return PartnerAPITypeSanVerification
+     * @return PartnerAPITypeSanVerification|null
      */
     public function getSANVerification()
     {

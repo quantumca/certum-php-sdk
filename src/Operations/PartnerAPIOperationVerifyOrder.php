@@ -99,7 +99,7 @@ class PartnerAPIOperationVerifyOrder extends PartnerAPIOperation
      *
      * @param string $type
      * @param string $description
-     * @param array $files An array of file names and file contents
+     * @param array<string,PartnerAPITypeFile|string> $files An array of file names and file contents
      * @return PartnerAPIOperationVerifyOrder
      */
     public function addDocument($type, $description, $files)

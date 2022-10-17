@@ -37,44 +37,44 @@ namespace Certum\Sdk\Types;
  * It is an extension to the PartnerAPITypeRequest class.
  *
  * @method PartnerAPITypeRenewCertificateRequest setSANApprover(PartnerAPITypeSanApprover $value) Sets the SANApprover element.
- * @method PartnerAPITypeSanApprover getSANApprover() Gets the SANApprover element or NULL.
- * @property PartnerAPITypeSanApprover $SANApprover Gets the SANApprover element or NULL.
+ * @method PartnerAPITypeSanApprover|null getSANApprover() Gets the SANApprover element or NULL.
+ * @property PartnerAPITypeSanApprover|null $SANApprover Gets the SANApprover element or NULL.
  *
  * @method PartnerAPITypeRenewCertificateRequest setCSR(string $value) Sets the CSR element.
- * @method string getCSR() Gets the CSR element.
- * @property string $CSR Gets the CSR element.
+ * @method string|null getCSR() Gets the CSR element.
+ * @property string|null $CSR Gets the CSR element.
  *
  * @method PartnerAPITypeRenewCertificateRequest setCustomer(string $value) Sets the customer element.
- * @method string getCustomer() Gets the customer element.
- * @property string $customer Gets the customer element.
+ * @method string|null getCustomer() Gets the customer element.
+ * @property string|null $customer Gets the customer element.
  *
  * @method PartnerAPITypeRenewCertificateRequest setProductCode(string $value) Sets the productCode element.
- * @method string getProductCode() Gets the productCode element.
- * @property string $productCode Gets the productCode element.
+ * @method string|null getProductCode() Gets the productCode element.
+ * @property string|null $productCode Gets the productCode element.
  *
  * @method PartnerAPITypeRenewCertificateRequest setSerialNumber(string $value) Sets the serialNumber element.
- * @method string getSerialNumber() Gets the serialNumber element or NULL.
- * @property string $serialNumber Gets the serialNumber element or NULL.
+ * @method string|null getSerialNumber() Gets the serialNumber element or NULL.
+ * @property string|null $serialNumber Gets the serialNumber element or NULL.
  *
  * @method PartnerAPITypeRenewCertificateRequest setX509Cert(string $value) Sets the X509Cert element.
- * @method string getX509Cert() Gets the X509Cert element or NULL.
- * @property string $X509Cert Gets the X509Cert element or NULL.
+ * @method string|null getX509Cert() Gets the X509Cert element or NULL.
+ * @property string|null $X509Cert Gets the X509Cert element or NULL.
  *
  * @method PartnerAPITypeRenewCertificateRequest setHashAlgorithm(string $value) Sets the hashAlgorithm element.
- * @method string getHashAlgorithm() Gets the hashAlgorithm element or NULL.
- * @property string $hashAlgorithm Gets the hashAlgorithm element or NULL.
+ * @method string|null getHashAlgorithm() Gets the hashAlgorithm element or NULL.
+ * @property string|null $hashAlgorithm Gets the hashAlgorithm element or NULL.
  *
  * @method PartnerAPITypeRenewCertificateRequest setUserAgent(string $value) Sets the UserAgent element.
- * @method string getUserAgent() Gets the UserAgent element or NULL.
- * @property string $userAgent Gets the UserAgent element or NULL.
+ * @method string|null getUserAgent() Gets the UserAgent element or NULL.
+ * @property string|null $userAgent Gets the UserAgent element or NULL.
  *
- * @method PartnerAPITypeOrderRequest setRevocationContactEmail $value) Sets the revocationContactEmail element.
- * @method string getRevocationContactEmail() Gets the revocationContactEmail element.
- * @property string $revocationContactEmail Gets the revocationContactEmail element.
+ * @method PartnerAPITypeOrderRequest setRevocationContactEmail(string $value) Sets the revocationContactEmail element.
+ * @method string|null getRevocationContactEmail() Gets the revocationContactEmail element.
+ * @property string|null $revocationContactEmail Gets the revocationContactEmail element.
  *
  * @method PartnerAPITypeOrderRequest setShortenedValidityPeriod(string $value) Sets the shortenedValidityPeriod element.
- * @method string getShortenedValidityPeriod() Gets the shortenedValidityPeriod element.
- * @property string $shortenedValidityPeriod Gets the shortenedValidityPeriod element.
+ * @method string|null getShortenedValidityPeriod() Gets the shortenedValidityPeriod element.
+ * @property string|null $shortenedValidityPeriod Gets the shortenedValidityPeriod element.
  *
  * @package types
  */

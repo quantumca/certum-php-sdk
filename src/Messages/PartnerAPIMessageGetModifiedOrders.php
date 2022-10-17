@@ -42,7 +42,7 @@ class PartnerAPIMessageGetModifiedOrders extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'getModifiedOrders':PartnerAPITypeGetModifiedOrdersRequest}
      */
     protected function initParts()
     {

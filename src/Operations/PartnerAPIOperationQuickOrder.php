@@ -15,6 +15,7 @@ use Certum\Sdk\Types\PartnerAPITypeOrganizationInfo;
 use Certum\Sdk\Types\PartnerAPITypeSanApprover;
 use Certum\Sdk\Types\PartnerAPITypeSanEntries;
 use Certum\Sdk\Types\PartnerAPITypeSanEntry;
+use Certum\Sdk\Types\PartnerAPITypeSanVerification;
 
 /*
 <operation name="quickOrder" parameterOrder="quickOrder">
@@ -40,11 +41,13 @@ class PartnerAPIOperationQuickOrder extends PartnerAPIOperation
      * @var PartnerAPIMessageQuickOrder
      */
     protected $_input = null;
-/**
+
+    /**
      * @var PartnerAPIMessageQuickOrderResponse
      */
     protected $_output = null;
-/**
+
+    /**
      * @var string
      */
     protected $_operation = 'quickOrder';

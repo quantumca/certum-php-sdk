@@ -35,7 +35,7 @@ class PartnerAPIMessageValidateOrderParametersResponse extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'validateOrderParametersResponse':PartnerAPITypeValidateOrderParametersResponse}
      */
     protected function initParts()
     {

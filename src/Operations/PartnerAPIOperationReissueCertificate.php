@@ -14,6 +14,7 @@ use Certum\Sdk\Messages\PartnerAPIMessageReissueCertificateResponse;
 use Certum\Sdk\Types\PartnerAPITypeSanApprover;
 use Certum\Sdk\Types\PartnerAPITypeSanEntries;
 use Certum\Sdk\Types\PartnerAPITypeSanEntry;
+use Certum\Sdk\Types\PartnerAPITypeSanVerification;
 
 /*
 <operation name="reissueCertificate" parameterOrder="reissueCertificate">

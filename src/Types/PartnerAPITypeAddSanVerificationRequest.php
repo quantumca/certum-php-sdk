@@ -28,8 +28,8 @@ namespace Certum\Sdk\Types;
  * It is based on the PartnerAPIType class and derives properties and methods from that class.
  *
  * @method PartnerAPITypeAddSanVerificationRequest setSANApprover(PartnerAPITypeSanApprover $value) Sets the SANApprover element.
- * @method PartnerAPITypeSanApprover getSANApprover() Gets the SANApprover element or NULL.
- * @property PartnerAPITypeSanApprover $SANApprover Gets the SANApprover element or NULL.
+ * @method PartnerAPITypeSanApprover|null getSANApprover() Gets the SANApprover element or NULL.
+ * @property PartnerAPITypeSanApprover|null $SANApprover Gets the SANApprover element or NULL.
  *
  * @method PartnerAPITypeAddSanVerificationRequest setOrderID(string $value) Sets the orderID element.
  * @method string getOrderID() Gets the orderID element.

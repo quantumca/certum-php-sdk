@@ -35,7 +35,7 @@ abstract class PartnerAPIType
      * 'type' = name of element's type, it can be 'string', 'int', 'long', 'boolean' or a class name which must be derived from PartnerAPIType,
      * 'nillable' => TRUE if attribute nillable = "true", or FALSE otherwise
      *
-     * @var array
+     * @var array<mixed>
      */
     protected $elems = array();
 
@@ -78,7 +78,7 @@ abstract class PartnerAPIType
      * then the implementations of this method must call the parent's initData() method
      * and merge all elements.
      *
-     * @return array A set of all type elements
+     * @return array<mixed,mixed> A set of all type elements
      */
     abstract protected function initData();
 
@@ -96,6 +96,8 @@ abstract class PartnerAPIType
      * This method resets object's data.
      *
      * It sets all elements to initial states.
+     * 
+     * @return void
      */
     public function resetData()
     {
@@ -111,8 +113,8 @@ abstract class PartnerAPIType
      * This method, although public, is not intended to be called directly.
      * It is rather used internally.
      *
-     * @param array $data Data to be set as elements' values
-     * @return PartnerAPIType
+     * @param array<mixed,mixed> $data Data to be set as elements' values
+     * @return $this
      * @throws PartnerAPIException
      */
     public function setData($data)
@@ -158,7 +160,7 @@ abstract class PartnerAPIType
      * will be omitted.
      *
      * @param boolean $omitNullValues
-     * @return array A set of all elements and they values
+     * @return array<mixed,mixed> A set of all elements and they values
      */
     public function getDataAsArray($omitNullValues = false)
     {
@@ -199,8 +201,8 @@ abstract class PartnerAPIType
      * of a type derived from PartnerAPIType, depending on a type's WSDL definition.
      *
      * @param string $name A name of invoked method
-     * @param array $arguments An array with a value to be set
-     * @return PartnerAPIType
+     * @param array<mixed,mixed> $arguments An array with a value to be set
+     * @return mixed
      * @throws PartnerAPIException
      */
     public function __call($name, $arguments)
@@ -239,8 +241,8 @@ abstract class PartnerAPIType
      * The new value replaces the old value.
      *
      * @param string $element An element's name
-     * @param array $arguments An array with a value to be set
-     * @return PartnerAPIType
+     * @param array<mixed,mixed> $arguments An array with a value to be set
+     * @return $this
      * @throws PartnerAPIException
      */
     protected function setElement($element, $arguments)
@@ -293,8 +295,8 @@ abstract class PartnerAPIType
      * and the new value replaces the old value.
      *
      * @param string $element An element's name
-     * @param array $arguments An array with a value to be set
-     * @return PartnerAPIType
+     * @param array<mixed,mixed> $arguments An array with a value to be set
+     * @return $this
      * @throws PartnerAPIException
      */
     protected function addElement($element, $arguments)

@@ -43,7 +43,7 @@ class PartnerAPIMessageModifySNICertificate extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'modifySNICertificate':PartnerAPITypeModifySNICertificateRequest}
      */
     protected function initParts()
     {

@@ -42,7 +42,7 @@ class PartnerAPIMessageGetOrdersByDateRange extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'getOrdersByDateRange':PartnerAPITypeGetOrdersByDateRangeRequest}
      */
     protected function initParts()
     {

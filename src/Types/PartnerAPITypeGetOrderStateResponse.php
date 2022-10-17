@@ -30,16 +30,16 @@ namespace Certum\Sdk\Types;
  * It is an extension to the PartnerAPITypeResponse class.
  *
  * @method PartnerAPITypeGetOrderStateResponse setVerifications(PartnerAPITypeOrderVerifications $value) Sets the verifications element.
- * @method PartnerAPITypeOrderVerifications getVerifications() Gets the verifications element or NULL.
- * @property PartnerAPITypeOrderVerifications $verifications Gets the verifications element or NULL.
+ * @method PartnerAPITypeOrderVerifications|null getVerifications() Gets the verifications element or NULL.
+ * @property PartnerAPITypeOrderVerifications|null $verifications Gets the verifications element or NULL.
  *
  * @method PartnerAPITypeGetOrderStateResponse setLastUpdateDate(string $value) Sets the lastUpdateDate element.
- * @method string getLastUpdateDate() Gets the lastUpdateDate element or NULL.
- * @property string $lastUpdateDate Gets the lastUpdateDate element or NULL.
+ * @method string|null getLastUpdateDate() Gets the lastUpdateDate element or NULL.
+ * @property string|null $lastUpdateDate Gets the lastUpdateDate element or NULL.
  *
  * @method PartnerAPITypeGetOrderStateResponse setOrderStatus(string $value) Sets the orderStatus element.
- * @method string getOrderStatus() Gets the orderStatus element or NULL.
- * @property string $orderStatus Gets the orderStatus element or NULL.
+ * @method string|null getOrderStatus() Gets the orderStatus element or NULL.
+ * @property string|null $orderStatus Gets the orderStatus element or NULL.
  *
  * @package types
  */

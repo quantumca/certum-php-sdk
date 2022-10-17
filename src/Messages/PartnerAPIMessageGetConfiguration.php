@@ -42,7 +42,7 @@ class PartnerAPIMessageGetConfiguration extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'getConfiguration':PartnerAPITypeGetConfigurationRequest}
      */
     protected function initParts()
     {

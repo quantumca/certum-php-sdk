@@ -11,6 +11,7 @@ namespace Certum\Sdk\Operations;
 
 use Certum\Sdk\Messages\PartnerAPIMessageGetOrderByOrderID;
 use Certum\Sdk\Messages\PartnerAPIMessageGetOrderByOrderIDResponse;
+use Certum\Sdk\Types\PartnerAPITypeOrder;
 use Certum\Sdk\Types\PartnerAPITypeOrderOption;
 
 /*
@@ -137,7 +138,7 @@ class PartnerAPIOperationGetOrderByOrderID extends PartnerAPIOperation
      * If there is no order in the response an empty array is returned.
      * Otherwise, an array with one or more orders is returned.
      *
-     * @return PartnerAPITypeOrder[]
+     * @return array<int,PartnerAPITypeOrder>
      */
     public function getOrders()
     {

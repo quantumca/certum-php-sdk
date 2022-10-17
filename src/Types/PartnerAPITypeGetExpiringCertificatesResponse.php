@@ -29,8 +29,8 @@ namespace Certum\Sdk\Types;
  *
  * @method PartnerAPITypeGetExpiringCertificatesResponse setExpiringCertificates(PartnerAPITypeExpiringCertificates $value) Sets the expiringCertificates element. This method removes all previously added expiringCertificates elements and creates a new set of expiringCertificates elements.
  * @method PartnerAPITypeGetExpiringCertificatesResponse addExpiringCertificates(PartnerAPITypeExpiringCertificates $value) Adds a new expiringCertificates element to the existing set.
- * @method PartnerAPITypeExpiringCertificates|PartnerAPITypeExpiringCertificates[] getExpiringCertificates() Gets the expiringCertificates element or NULL. If there is only one element, it will be returned, otherwise an array of PartnerAPITypeExpiringCertificates objects will be returned.
- * @property PartnerAPITypeExpiringCertificates|PartnerAPITypeExpiringCertificates[] $expiringCertificates Gets the expiringCertificates element or NULL. If there is only one element, it will be returned, otherwise an array of PartnerAPITypeExpiringCertificates objects will be returned.
+ * @method PartnerAPITypeExpiringCertificates|PartnerAPITypeExpiringCertificates[]|null getExpiringCertificates() Gets the expiringCertificates element or NULL. If there is only one element, it will be returned, otherwise an array of PartnerAPITypeExpiringCertificates objects will be returned.
+ * @property PartnerAPITypeExpiringCertificates|PartnerAPITypeExpiringCertificates[]|null $expiringCertificates Gets the expiringCertificates element or NULL. If there is only one element, it will be returned, otherwise an array of PartnerAPITypeExpiringCertificates objects will be returned.
  *
  * @package types
  */

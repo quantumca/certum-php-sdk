@@ -35,8 +35,8 @@ namespace Certum\Sdk\Types;
  * @property string $fromDate Gets the fromDate element.
  *
  * @method PartnerAPITypeGetOrdersRequest setOrderOption(PartnerAPITypeOrderOption $value) Sets the orderOption element.
- * @method PartnerAPITypeOrderOption getOrderOption() Gets the orderOption element or NULL.
- * @property PartnerAPITypeOrderOption $orderOption Gets the orderOption element or NULL.
+ * @method PartnerAPITypeOrderOption|null getOrderOption() Gets the orderOption element or NULL.
+ * @property PartnerAPITypeOrderOption|null $orderOption Gets the orderOption element or NULL.
  *
  * @method PartnerAPITypeGetOrdersRequest setPageNumber(int $value) Sets the pageNumber element.
  * @method int getPageNumber() Gets the pageNumber element or NULL.

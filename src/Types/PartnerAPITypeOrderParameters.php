@@ -129,7 +129,7 @@ namespace Certum\Sdk\Types;
  * @method string getJoisocn() Gets the joisocn element or NULL.
  * @property string $joisocn Gets the joisocn element or NULL.
  *
- * @method PartnerAPITypeOrderParameters setRevocationContactEmail $value) Sets the revocationContactEmail element.
+ * @method PartnerAPITypeOrderParameters setRevocationContactEmail(string $value) Sets the revocationContactEmail element.
  * @method string getRevocationContactEmail() Gets the revocationContactEmail element.
  * @property string $revocationContactEmail Gets the revocationContactEmail element.
  *

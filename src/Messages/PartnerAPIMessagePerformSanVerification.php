@@ -43,7 +43,7 @@ class PartnerAPIMessagePerformSanVerification extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'performSanVerification':PartnerAPITypeDomainVerificationRequest}
      */
     protected function initParts()
     {

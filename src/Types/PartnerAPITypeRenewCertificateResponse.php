@@ -33,8 +33,8 @@ namespace Certum\Sdk\Types;
  * @property string $orderID Gets the orderID element.
  *
  * @method PartnerAPITypeRenewCertificateResponse setSANVerification(PartnerAPITypeSanVerification $value) Sets the SANVerification element.
- * @method PartnerAPITypeSanVerification getSANVerification() Gets the SANVerification element or NULL.
- * @property PartnerAPITypeSanVerification $SANVerification Gets the SANVerification element or NULL.
+ * @method PartnerAPITypeSanVerification|null getSANVerification() Gets the SANVerification element or NULL.
+ * @property PartnerAPITypeSanVerification|null $SANVerification Gets the SANVerification element or NULL.
  *
  * @package types
  */

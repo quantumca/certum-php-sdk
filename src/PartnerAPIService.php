@@ -118,7 +118,7 @@ class PartnerAPIService
      * If set to NULL, no debugging information will be stored anywhere.
      * Otherwise, $_debugFile should contain a file name or a URL supported by PHP.
      *
-     * @var string
+     * @var string|null
      */
     private $_debugFile = null;
 
@@ -258,7 +258,7 @@ class PartnerAPIService
     }
 
     /**
-     * Sets the current URL for test WSDL.
+     * Sets the current URL for a WSDL Test.
      *
      * @return PartnerAPIService The object being called
      */
@@ -269,7 +269,7 @@ class PartnerAPIService
     }
 
     /**
-     * Sets the current URL for test WSDL.
+     * Sets the current URL for a WSDL Prod.
      *
      * @return PartnerAPIService The object being called
      */
@@ -652,7 +652,7 @@ class PartnerAPIService
      * It returns an object containg all returned data from the service.
      *
      * @param string $operation The operations to be called
-     * @param array $data The data to be passed to the operation
+     * @param array<int,mixed> $data The data to be passed to the operation
      * @return object
      * @throws SoapFault
      * @throws PartnerAPIException
@@ -681,9 +681,10 @@ class PartnerAPIService
      * Writes debugging information to a file.
      *
      * @param string $operation Operation invoked
-     * @param array $data Data sent
-     * @param array|string|object $r Response data
+     * @param array<int,mixed> $data Data sent
+     * @param SoapFault|array<int,mixed>|string|object $r Response data
      * @param SoapClient $client Client object
+     * @return void
      */
     protected function writeDebugData($operation, $data, $r, $client)
     {
@@ -695,7 +696,7 @@ class PartnerAPIService
             fwrite($f, "TIME: " . date("Y-m-d H:i:s") . "\n");
             fwrite($f, "SERVICE USED: " . $this->_wsdl . "\n");
             fwrite($f, "OPERATION INVOKED: " . $operation . "\n");
-            if (is_soap_fault($r)) {
+            if (is_soap_fault($r) && $r instanceof SoapFault) {
                 fwrite($f, "AN ERROR OCCURED:\n");
                 fwrite($f, "SOAP FAULT CODE: " . $r->faultcode . "\n");
                 fwrite($f, "SOAP FAULT MESSAGE: " . $r->faultstring . "\n");

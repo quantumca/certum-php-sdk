@@ -36,11 +36,13 @@ class PartnerAPIOperationAddEmailVerification extends PartnerAPIOperation
      * @var PartnerAPIMessageAddEmailVerification
      */
     protected $_input = null;
-/**
+
+    /**
      * @var PartnerAPIMessageAddEmailVerificationResponse
      */
     protected $_output = null;
-/**
+
+    /**
      * @var string
      */
     protected $_operation = 'addEmailVerification';

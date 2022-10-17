@@ -35,7 +35,7 @@ class PartnerAPIMessageVerifyOrderResponse extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'verifyOrderResponse':PartnerAPITypeVerifyOrderResponse}
      */
     protected function initParts()
     {

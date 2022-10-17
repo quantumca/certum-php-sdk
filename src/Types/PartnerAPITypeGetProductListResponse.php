@@ -34,8 +34,8 @@ namespace Certum\Sdk\Types;
  * It is an extension to the PartnerAPITypeResponse class.
  *
  * @method PartnerAPITypeGetProductListResponse setProducts(PartnerAPITypeGetProductListResponse_Products $value) Sets the products element.
- * @method PartnerAPITypeGetProductListResponse_Products getProducts() Gets the products element or NULL.
- * @property PartnerAPITypeGetProductListResponse_Products $products Gets the products element or NULL.
+ * @method PartnerAPITypeGetProductListResponse_Products|null getProducts() Gets the products element or NULL.
+ * @property PartnerAPITypeGetProductListResponse_Products|null $products Gets the products element or NULL.
  *
  * @package types
  */

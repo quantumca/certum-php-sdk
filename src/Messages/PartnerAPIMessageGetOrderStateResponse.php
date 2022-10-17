@@ -34,7 +34,7 @@ class PartnerAPIMessageGetOrderStateResponse extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'getOrderStateResponse':PartnerAPITypeGetOrderStateResponse}
      */
     protected function initParts()
     {

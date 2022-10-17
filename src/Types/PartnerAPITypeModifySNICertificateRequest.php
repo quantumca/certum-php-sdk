@@ -40,16 +40,16 @@ namespace Certum\Sdk\Types;
  * @property string $X509Cert Gets the X509Cert element.
  *
  * @method PartnerAPITypeModifySNICertificateRequest setAddSerialNumbers(PartnerAPITypeAddSerialNumbers $value) Sets the addSerialNumbers element.
- * @method PartnerAPITypeAddSerialNumbers getAddSerialNumbers() Gets the addSerialNumbers element or NULL.
- * @property PartnerAPITypeAddSerialNumbers $addSerialNumbers Gets the addSerialNumbers element or NULL.
+ * @method PartnerAPITypeAddSerialNumbers|null getAddSerialNumbers() Gets the addSerialNumbers element or NULL.
+ * @property PartnerAPITypeAddSerialNumbers|null $addSerialNumbers Gets the addSerialNumbers element or NULL.
  *
  * @method PartnerAPITypeModifySNICertificateRequest setRemoveSerialNumbers(PartnerAPITypeRemoveSerialNumbers $value) Sets the removeSerialNumbers element.
- * @method PartnerAPITypeRemoveSerialNumbers getRemoveSerialNumbers() Gets the removeSerialNumbers element or NULL.
- * @property PartnerAPITypeRemoveSerialNumbers $removeSerialNumbers Gets the removeSerialNumbers element or NULL.
+ * @method PartnerAPITypeRemoveSerialNumbers|null getRemoveSerialNumbers() Gets the removeSerialNumbers element or NULL.
+ * @property PartnerAPITypeRemoveSerialNumbers|null $removeSerialNumbers Gets the removeSerialNumbers element or NULL.
  *
  * @method PartnerAPITypeModifySNICertificateRequest setHashAlgorithm(string $value) Sets the hashAlgorithm element.
- * @method string getHashAlgorithm() Gets the hashAlgorithm element or NULL.
- * @property string $hashAlgorithm Gets the hashAlgorithm element or NULL.
+ * @method string|null getHashAlgorithm() Gets the hashAlgorithm element or NULL.
+ * @property string|null $hashAlgorithm Gets the hashAlgorithm element or NULL.
  *
  * @package types
  */

@@ -35,7 +35,7 @@ class PartnerAPIMessageAddSanVerificationResponse extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'addSanVerificationResponse':PartnerAPITypeAddSanVerificationResponse}
      */
     protected function initParts()
     {

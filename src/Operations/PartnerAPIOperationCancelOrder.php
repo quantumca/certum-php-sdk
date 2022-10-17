@@ -36,11 +36,13 @@ class PartnerAPIOperationCancelOrder extends PartnerAPIOperation
      * @var PartnerAPIMessageCancelOrder
      */
     protected $_input = null;
-/**
+
+    /**
      * @var PartnerAPIMessageCancelOrderResponse
      */
     protected $_output = null;
-/**
+
+    /**
      * @var string
      */
     protected $_operation = 'cancelOrder';

@@ -2,6 +2,8 @@
 
 namespace Certum\Sdk\Exceptions;
 
+use Certum\Sdk\Types\PartnerAPITypeError;
+
 /**
  * Partner API Library
  *
@@ -21,7 +23,7 @@ class PartnerAPIError
     /**
      * A set of status descriptions.
      *
-     * @var array
+     * @var array{'en':array<int,string>,'pl':array<int,string>}
      */
     protected $texts_status = array(
         'en' => array(
@@ -37,7 +39,7 @@ class PartnerAPIError
     /**
      * A set of error descriptions.
      *
-     * @var array
+     * @var array{'en':array<int,string>,'pl':array<int,string>}
      */
     protected $texts_error = array(
         'en' => array(
@@ -620,8 +622,8 @@ class PartnerAPIError
      *
      * @param string $lang
      * @param int $status
-     * @param array $errors
-     * @return array
+     * @param PartnerAPITypeError[] $errors
+     * @return array<int,array{'code':int,'number':int|null,'text':string}>
      */
     public function getText($lang, $status, $errors)
     {

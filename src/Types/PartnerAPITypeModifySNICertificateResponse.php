@@ -29,12 +29,12 @@ namespace Certum\Sdk\Types;
  * It is an extension to the PartnerAPITypeResponse class.
  *
  * @method PartnerAPITypeModifySNICertificateResponse setOrderID(string $value) Sets the orderID element.
- * @method string getOrderID() Gets the orderID element.
- * @property string $orderID Gets the orderID element.
+ * @method string|null getOrderID() Gets the orderID element.
+ * @property string|null $orderID Gets the orderID element.
  *
  * @method PartnerAPITypeModifySNICertificateResponse setInvalidSerialNumbers(PartnerAPITypeInvalidSerialNumbers $value) Sets the invalidSerialNumbers element.
- * @method PartnerAPITypeInvalidSerialNumbers getInvalidSerialNumbers() Gets the invalidSerialNumbers element or NULL.
- * @property PartnerAPITypeInvalidSerialNumbers $invalidSerialNumbers Gets the invalidSerialNumbers element or NULL.
+ * @method PartnerAPITypeInvalidSerialNumbers|null getInvalidSerialNumbers() Gets the invalidSerialNumbers element or NULL.
+ * @property PartnerAPITypeInvalidSerialNumbers|null $invalidSerialNumbers Gets the invalidSerialNumbers element or NULL.
  *
  * @package types
  */

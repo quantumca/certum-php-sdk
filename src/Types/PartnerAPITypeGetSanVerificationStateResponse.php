@@ -28,8 +28,8 @@ namespace Certum\Sdk\Types;
  * It is an extension to the PartnerAPITypeResponse class.
  *
  * @method PartnerAPITypeGetSanVerificationStateResponse setSanVerifications(PartnerAPITypeSanVerificationStates $value) Sets the sanVerifications element.
- * @method PartnerAPITypeSanVerificationStates getSanVerifications() Gets the sanVerifications element or NULL.
- * @property PartnerAPITypeSanVerificationStates $sanVerifications Gets the sanVerifications element or NULL.
+ * @method PartnerAPITypeSanVerificationStates|null getSanVerifications() Gets the sanVerifications element or NULL.
+ * @property PartnerAPITypeSanVerificationStates|null $sanVerifications Gets the sanVerifications element or NULL.
  *
  * @package types
  */

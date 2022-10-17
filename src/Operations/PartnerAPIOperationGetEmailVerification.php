@@ -11,6 +11,7 @@ namespace Certum\Sdk\Operations;
 
 use Certum\Sdk\Messages\PartnerAPIMessageGetEmailVerification;
 use Certum\Sdk\Messages\PartnerAPIMessageGetEmailVerificationResponse;
+use Certum\Sdk\Types\PartnerAPITypeEmailVerification;
 
 /*
 <operation name="getEmailVerification" parameterOrder="getEmailVerification">
@@ -36,11 +37,13 @@ class PartnerAPIOperationGetEmailVerification extends PartnerAPIOperation
      * @var PartnerAPIMessageGetEmailVerification
      */
     protected $_input = null;
-/**
+
+    /**
      * @var PartnerAPIMessageGetEmailVerificationResponse
      */
     protected $_output = null;
-/**
+
+    /**
      * @var string
      */
     protected $_operation = 'getEmailVerification';

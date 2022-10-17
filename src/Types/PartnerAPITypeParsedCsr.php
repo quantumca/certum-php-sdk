@@ -52,44 +52,44 @@ namespace Certum\Sdk\Types;
  * @property string $joISoCN Gets the joISoCN element or NULL.
  *
  * @method PartnerAPITypeParsedCsr setJoILN(string $value) Sets the joILN element.
- * @method string getJoILN() Gets the joILN element or NULL.
- * @property string $joILN Gets the joILN element or NULL.
+ * @method string|null getJoILN() Gets the joILN element or NULL.
+ * @property string|null $joILN Gets the joILN element or NULL.
  *
  * @method PartnerAPITypeParsedCsr setJoISoPN(string $value) Sets the joISoPN element.
- * @method string getJoISoPN() Gets the joISoPN element or NULL.
- * @property string $joISoPN Gets the joISoPN element or NULL.
+ * @method string|null getJoISoPN() Gets the joISoPN element or NULL.
+ * @property string|null $joISoPN Gets the joISoPN element or NULL.
  *
  * @method PartnerAPITypeParsedCsr setBusinessCategory(string $value) Sets the businessCategory element.
- * @method string getBusinessCategory() Gets the businessCategory element or NULL.
- * @property string $businessCategory Gets the businessCategory element or NULL.
+ * @method string|null getBusinessCategory() Gets the businessCategory element or NULL.
+ * @property string|null $businessCategory Gets the businessCategory element or NULL.
  *
  * @method PartnerAPITypeParsedCsr setLocality(string $value) Sets the locality element.
- * @method string getLocality() Gets the locality element or NULL.
- * @property string $locality Gets the locality element or NULL.
+ * @method string|null getLocality() Gets the locality element or NULL.
+ * @property string|null $locality Gets the locality element or NULL.
  *
  * @method PartnerAPITypeParsedCsr setOrganization(string $value) Sets the organization element.
- * @method string getOrganization() Gets the organization element or NULL.
- * @property string $organization Gets the organization element or NULL.
+ * @method string|null getOrganization() Gets the organization element or NULL.
+ * @property string|null $organization Gets the organization element or NULL.
  *
  * @method PartnerAPITypeParsedCsr setOrganizationalUnit(string $value) Sets the organizationalUnit element.
- * @method string getOrganizationalUnit() Gets the organizationalUnit element or NULL.
- * @property string $organizationalUnit Gets the organizationalUnit element or NULL.
+ * @method string|null getOrganizationalUnit() Gets the organizationalUnit element or NULL.
+ * @property string|null $organizationalUnit Gets the organizationalUnit element or NULL.
  *
  * @method PartnerAPITypeParsedCsr setPostalCode(string $value) Sets the postalCode element.
- * @method string getPostalCode() Gets the postalCode element or NULL.
- * @property string $postalCode Gets the postalCode element or NULL.
+ * @method string|null getPostalCode() Gets the postalCode element or NULL.
+ * @property string|null $postalCode Gets the postalCode element or NULL.
  *
  * @method PartnerAPITypeParsedCsr setSerialNumber(string $value) Sets the serialNumber element.
- * @method string getSerialNumber() Gets the serialNumber element or NULL.
- * @property string $serialNumber Gets the serialNumber element or NULL.
+ * @method string|null getSerialNumber() Gets the serialNumber element or NULL.
+ * @property string|null $serialNumber Gets the serialNumber element or NULL.
  *
  * @method PartnerAPITypeParsedCsr setStreetAddress(string $value) Sets the streetAddress element.
- * @method string getStreetAddress() Gets the streetAddress element or NULL.
- * @property string $streetAddress Gets the streetAddress element or NULL.
+ * @method string|null getStreetAddress() Gets the streetAddress element or NULL.
+ * @property string|null $streetAddress Gets the streetAddress element or NULL.
  *
  * @method PartnerAPITypeParsedCsr setState(string $value) Sets the state element.
- * @method string getState() Gets the state element or NULL.
- * @property string $state Gets the state element or NULL.
+ * @method string|null getState() Gets the state element or NULL.
+ * @property string|null $state Gets the state element or NULL.
  *
  * @package types
  */

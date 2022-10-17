@@ -34,8 +34,8 @@ namespace Certum\Sdk\Types;
  * @property string $orderID Gets the orderID element.
  *
  * @method PartnerAPITypeVerifyOrderParameters setDocuments(PartnerAPITypeDocuments $value) Sets the documents element.
- * @method PartnerAPITypeDocuments getDocuments() Gets the documents element or NULL.
- * @property PartnerAPITypeDocuments $documents Gets the documents element or NULL.
+ * @method PartnerAPITypeDocuments|null getDocuments() Gets the documents element or NULL.
+ * @property PartnerAPITypeDocuments|null $documents Gets the documents element or NULL.
  *
  * @package types
  */

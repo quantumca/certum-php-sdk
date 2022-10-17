@@ -12,6 +12,7 @@ namespace Certum\Sdk\Operations;
 use Certum\Sdk\Messages\PartnerAPIMessageValidateOrderParameters;
 use Certum\Sdk\Messages\PartnerAPIMessageValidateOrderParametersResponse;
 use Certum\Sdk\Types\PartnerAPITypeOrganizationInfo;
+use Certum\Sdk\Types\PartnerAPITypeParsedCsr;
 use Certum\Sdk\Types\PartnerAPITypeSanApprover;
 use Certum\Sdk\Types\PartnerAPITypeSanEntries;
 use Certum\Sdk\Types\PartnerAPITypeSanEntry;
@@ -40,11 +41,13 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * @var PartnerAPIMessageValidateOrderParameters
      */
     protected $_input = null;
-/**
+
+    /**
      * @var PartnerAPIMessageValidateOrderParametersResponse
      */
     protected $_output = null;
-/**
+
+    /**
      * @var string
      */
     protected $_operation = 'validateOrderParameters';
@@ -66,7 +69,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * Setting this value is required.
      *
      * @param string $csr
-     * @return static
+     * @return $this
      */
     public function setCSR($csr)
     {
@@ -80,7 +83,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * Setting this value is required.
      *
      * @param string $customer
-     * @return static
+     * @return $this
      */
     public function setCustomer($customer)
     {
@@ -94,7 +97,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * Default is 'pl'. Also acceptable are 'en' and 'ru'.
      *
      * @param string $lang
-     * @return static
+     * @return $this
      */
     public function setLanguage($lang)
     {
@@ -109,7 +112,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * This identificator have to be unique and it is used to refer to the request.
      *
      * @param string $id
-     * @return static
+     * @return $this
      */
     public function setOrderID($id)
     {
@@ -123,7 +126,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * Setting this value is required.
      *
      * @param string $code
-     * @return static
+     * @return $this
      */
     public function setProductCode($code)
     {
@@ -135,7 +138,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * Sets a string identifying web browser and operating system.
      *
      * @param string $userAgent
-     * @return static
+     * @return $this
      */
     public function setUserAgent($userAgent)
     {
@@ -147,7 +150,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * Sets a hash algorithm for a certificate.
      *
      * @param string $hashAlgorithm
-     * @return static
+     * @return $this
      */
     public function setHashAlgorithm($hashAlgorithm)
     {
@@ -159,7 +162,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * Sets an email for a SSL certificate.
      *
      * @param string $email
-     * @return static
+     * @return $this
      */
     public function setEmail($email)
     {
@@ -176,13 +179,13 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * @param string $lastName
      * @param string $email
      * @param string $phone
-     * @return static
+     * @return $this
      */
     public function setRequestorInfo($firstName, $lastName, $email, $phone)
     {
         $ri = $this->_input->validateOrderParameters->requestorInfo;
         $ri->setFirstName($firstName)->setLastName($lastName)
-           ->setEmail($email)->setPhone($phone);
+            ->setEmail($email)->setPhone($phone);
         return $this;
     }
 
@@ -192,8 +195,9 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * It is not required to set organization information but if you need or have to set it
      * all the arguments are required.
      *
+     * @param string $name
      * @param string $taxNumber The tax identification number
-     * @return static
+     * @return $this
      */
     public function setOrganizationInfo($name, $taxNumber)
     {
@@ -211,7 +215,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * then you have to change this as same as SAN entries and approvers.
      *
      * @param string $commonName The commonName to override CN given in CSR
-     * @return static
+     * @return $this
      */
     public function setCommonName($commonName)
     {
@@ -226,7 +230,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $organization The organization to override O given in CSR
-     * @return static
+     * @return $this
      */
     public function setOrganization($organization)
     {
@@ -241,7 +245,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $organizationalUnit The Organizational Unit to override OU given in CSR
-     * @return static
+     * @return $this
      */
     public function setOrganizationalUnit($organizationalUnit)
     {
@@ -256,7 +260,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $locality The locality to override L given in CSR
-     * @return static
+     * @return $this
      */
     public function setLocality($locality)
     {
@@ -271,7 +275,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $country The country to override C given in CSR
-     * @return static
+     * @return $this
      */
     public function setCountry($country)
     {
@@ -286,7 +290,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $state The state to override state given in CSR
-     * @return static
+     * @return $this
      */
     public function setState($state)
     {
@@ -301,7 +305,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $serialNumber The serialNumber to override serialNumber given in CSR
-     * @return static
+     * @return $this
      */
     public function setSerialNumber($serialNumber)
     {
@@ -316,7 +320,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $businessCategory The businessCategory to override businessCategory given in CSR
-     * @return static
+     * @return $this
      */
     public function setBusinessCategory($businessCategory)
     {
@@ -331,7 +335,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $streetAddress The streetAddress to override streetAddress given in CSR
-     * @return static
+     * @return $this
      */
     public function setStreetAddress($streetAddress)
     {
@@ -346,7 +350,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $postalCode The postalCode to override postalCode given in CSR
-     * @return static
+     * @return $this
      */
     public function setPostalCode($postalCode)
     {
@@ -361,7 +365,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $joiln The joiln to override joiln given in CSR
-     * @return static
+     * @return $this
      */
     public function setJoiln($joiln)
     {
@@ -376,7 +380,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $joisopn The joisopn to override joisopn given in CSR
-     * @return static
+     * @return $this
      */
     public function setJoisopn($joisopn)
     {
@@ -391,7 +395,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * use this method.
      *
      * @param string $joisocn The joisocn to override joisocn given in CSR
-     * @return static
+     * @return $this
      */
     public function setJoisocn($joisocn)
     {
@@ -407,11 +411,11 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * of such domain names.
      *
      * @param string|string[] $domain
-     * @return static
+     * @return $this
      */
     public function addSANEntry($domain)
     {
-        if (! is_array($domain)) {
+        if (!is_array($domain)) {
             $domain = array($domain);
         }
         $SANEntries = $this->_input->validateOrderParameters->SANEntries;
@@ -433,7 +437,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * This option determines which approve method will be used for domain verification.
      *
      * @param string $approverMethod
-     * @return static
+     * @return $this
      */
     public function setApproverMethod($approverMethod)
     {
@@ -453,7 +457,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * This method cannot be used with EMAIL approve method.
      *
      * @param string $approverEmail
-     * @return static
+     * @return $this
      */
     public function setApproverEmail($approverEmail)
     {
@@ -473,7 +477,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * This method cannot be used with FILE or DNS approve method.
      *
      * @param string $approverEmailPrefix
-     * @return static
+     * @return $this
      */
     public function setApproverEmailPrefix($approverEmailPrefix)
     {
@@ -493,7 +497,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * This option determines if verification e-mails for all approvers will be sent or not.
      *
      * @param boolean $yes_or_no
-     * @return static
+     * @return $this
      */
     public function setVerificationNotificationEnabled($yes_or_no)
     {
@@ -512,7 +516,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      * The returned value can be an object of PartnerAPITypeParsedCsr class
      * or null.
      *
-     * @return PartnerAPITypeParsedCsr
+     * @return PartnerAPITypeParsedCsr|null
      */
     public function getParsedCSR()
     {
@@ -533,15 +537,15 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
      */
     public function prepareQuickOrderOperation()
     {
-                $op = new PartnerAPIOperationQuickOrder();
+        $op = new PartnerAPIOperationQuickOrder();
         $op->setService($this->_service);
         $p = $this->_input->validateOrderParameters->orderParameters;
         $op->setCSR($p->CSR)->setCustomer($p->customer)->setLanguage($p->language)
-           ->setOrderID($p->orderID)->setUserAgent($p->userAgent)->setProductCode($p->productCode);
+            ->setOrderID($p->orderID)->setUserAgent($p->userAgent)->setProductCode($p->productCode);
         $r = $this->_input->validateOrderParameters->requestorInfo;
         $op->setRequestorInfo($r->firstName, $r->lastName, $r->email, $r->phone);
         $o = $this->_input->validateOrderParameters->organizationInfo;
-        if (! is_null($o)) {
+        if (!is_null($o)) {
             $op->setOrganizationInfo($o->taxIdentificationNumber);
         }
         $a = $this->_input->validateOrderParameters->SANApprover;
@@ -552,7 +556,7 @@ class PartnerAPIOperationValidateOrderParameters extends PartnerAPIOperation
             $op->setVerificationNotificationEnabled($a->verificationNotificationEnabled);
         }
         $s = $this->_input->validateOrderParameters->SANEntries;
-        if (! is_null($s)) {
+        if (!is_null($s)) {
             if (is_array($s->SANEntry)) {
                 foreach ($s->SANEntry as $san) {
                     $op->addSANEntry($san->DNSName);

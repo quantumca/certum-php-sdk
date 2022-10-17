@@ -11,6 +11,7 @@ namespace Certum\Sdk\Operations;
 
 use Certum\Sdk\Messages\PartnerAPIMessageGetExpiringCertificates;
 use Certum\Sdk\Messages\PartnerAPIMessageGetExpiringCertificatesResponse;
+use Certum\Sdk\Types\PartnerAPITypeExpiringCertificates;
 
 /*
 <operation name="getExpiringCertificates" parameterOrder="getExpiringCertificates">

@@ -28,8 +28,8 @@ namespace Certum\Sdk\Types;
  * It is an extension to the PartnerAPITypeResponse class.
  *
  * @method PartnerAPITypeGetOrdersResponse setOrders(PartnerAPITypeOrders $value) Sets the orders element.
- * @method PartnerAPITypeOrders getOrders() Gets the orders element or NULL.
- * @property PartnerAPITypeOrders $orders Gets the orders element or NULL.
+ * @method PartnerAPITypeOrders|null getOrders() Gets the orders element or NULL.
+ * @property PartnerAPITypeOrders|null $orders Gets the orders element or NULL.
  *
  * @package types
  */

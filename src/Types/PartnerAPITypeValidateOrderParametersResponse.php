@@ -28,8 +28,8 @@ namespace Certum\Sdk\Types;
  * It is an extension to the PartnerAPITypeResponse class.
  *
  * @method PartnerAPITypeValidateOrderParametersResponse setParsedCSR(PartnerAPITypeParsedCsr $value) Sets the ParsedCSR element.
- * @method PartnerAPITypeParsedCsr getParsedCSR() Gets the ParsedCSR element or NULL.
- * @property PartnerAPITypeParsedCsr $ParsedCSR Gets the ParsedCSR element or NULL.
+ * @method PartnerAPITypeParsedCsr|null getParsedCSR() Gets the ParsedCSR element or NULL.
+ * @property PartnerAPITypeParsedCsr|null $ParsedCSR Gets the ParsedCSR element or NULL.
  *
  * @package types
  */

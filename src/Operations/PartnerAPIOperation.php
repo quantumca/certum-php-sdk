@@ -3,7 +3,10 @@
 namespace Certum\Sdk\Operations;
 
 use Certum\Sdk\Exceptions\PartnerAPIError;
+use Certum\Sdk\Messages\PartnerAPIMessage;
 use Certum\Sdk\PartnerAPIService;
+use Certum\Sdk\Types\PartnerAPITypeError;
+use Certum\Sdk\Types\PartnerAPITypeResponseHeader;
 
 /**
  * Partner API Library
@@ -69,6 +72,7 @@ abstract class PartnerAPIOperation
      * necessary functionality for communication.
      *
      * @param PartnerAPIService $service A service object
+     * @return void
      */
     public function setService(PartnerAPIService $service)
     {
@@ -97,7 +101,7 @@ abstract class PartnerAPIOperation
      * will be omitted.
      *
      * @param bool $omitNullValues
-     * @return array All the operation data
+     * @return array<int,mixed> All the operation data
      */
     public function getInputDataAsArray($omitNullValues = false)
     {
@@ -109,7 +113,7 @@ abstract class PartnerAPIOperation
      *
      * The returned array contains the data which was returned from the Partner API WebService.
      *
-     * @return array All the operation's response data
+     * @return array<int,mixed> All the operation's response data
      */
     public function getOutputDataAsArray()
     {
@@ -213,7 +217,7 @@ abstract class PartnerAPIOperation
      * code, number, text, where code is a success code, number is a error
      * number and text is a description of an error.
      *
-     * @return array
+     * @return array<int,array{'code':int,'number':int|null,'text':string}>
      */
     public function getErrorTexts()
     {

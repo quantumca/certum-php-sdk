@@ -36,11 +36,13 @@ class PartnerAPIOperationRevokeCertificate extends PartnerAPIOperation
      * @var PartnerAPIMessageRevokeCertificate
      */
     protected $_input = null;
-/**
+
+    /**
      * @var PartnerAPIMessageRevokeCertificateResponse
      */
     protected $_output = null;
-/**
+
+    /**
      * @var string
      */
     protected $_operation = 'revokeCertificate';

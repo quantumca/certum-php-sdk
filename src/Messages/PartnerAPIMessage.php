@@ -3,6 +3,8 @@
 namespace Certum\Sdk\Messages;
 
 use Certum\Sdk\Exceptions\PartnerAPIException;
+use Certum\Sdk\Types\PartnerAPIType;
+use Certum\Sdk\Types\PartnerAPITypeResponseHeader;
 
 /**
  * Partner API Library
@@ -21,20 +23,21 @@ use Certum\Sdk\Exceptions\PartnerAPIException;
  * should return an array containing all message's parts.
  *
  * @package messages
+ * @method string|int|long|boolean|null|object getElement(string $element)
  */
 abstract class PartnerAPIMessage
 {
     /**
      * This field defines a part name with credentials data.
      *
-     * @var string
+     * @var string|null
      */
     protected $partWithCredentials = null;
 
     /**
      * This field defines a part name with a response header.
      *
-     * @var string
+     * @var string|null
      */
     protected $partWithResponseHeader = null;
 
@@ -44,7 +47,7 @@ abstract class PartnerAPIMessage
      * This is an array where keys are names of a message's parts and
      * values are objects of certain types according to the WSDL file.
      *
-     * @var array
+     * @var array{string?:mixed}
      */
     protected $parts = array();
 
@@ -70,7 +73,7 @@ abstract class PartnerAPIMessage
      *     'partName' => PartnerAPITypeSomeType()
      * )
      *
-     * @return array A set of a message's parts
+     * @return array{string?:mixed} A set of a message's parts
      */
     abstract protected function initParts();
 
@@ -128,7 +131,7 @@ abstract class PartnerAPIMessage
      * will be omitted.
      *
      * @param bool $omitNullValues
-     * @return array
+     * @return array<int,mixed>
      */
     public function getDataAsArray($omitNullValues = false)
     {
@@ -148,7 +151,7 @@ abstract class PartnerAPIMessage
      * This method, although public, is not intended to be called directly.
      * It is rather used internally.
      *
-     * @param array $data
+     * @param object|array<mixed> $data
      * @return PartnerAPIMessage
      * @throws PartnerAPIException
      */
@@ -171,7 +174,7 @@ abstract class PartnerAPIMessage
      * and the Xxx part of a method's name is a part name.
      *
      * @param string $name A name of invoked method
-     * @param array $arguments Unsed argument but required by PHP
+     * @param mixed[] $arguments Unsed argument but required by PHP
      * @return PartnerAPIType Actually it is an object of a type derived from the PartnerAPIType type
      * @throws PartnerAPIException
      */

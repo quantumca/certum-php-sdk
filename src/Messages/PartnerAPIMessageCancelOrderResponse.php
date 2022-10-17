@@ -35,7 +35,7 @@ class PartnerAPIMessageCancelOrderResponse extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'cancelOrderResponse':PartnerAPITypeCancelOrderReponse}
      */
     protected function initParts()
     {

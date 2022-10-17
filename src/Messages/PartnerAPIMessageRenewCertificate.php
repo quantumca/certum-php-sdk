@@ -43,7 +43,7 @@ class PartnerAPIMessageRenewCertificate extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'renewCertificate':PartnerAPITypeRenewCertificateRequest}
      */
     protected function initParts()
     {

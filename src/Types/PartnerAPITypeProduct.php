@@ -39,9 +39,9 @@ namespace Certum\Sdk\Types;
  * @method PartnerAPITypeProduct_SupportedHashAlgorithms getSupportedHashAlgorithms() Gets the supportedHashAlgorithms element or NULL.
  * @property PartnerAPITypeProduct_SupportedHashAlgorithms $supportedHashAlgorithms Gets the supportedHashAlgorithms element or NULL.
  *
- * @method PartnerAPITypeProduct setCode(long $value) Sets the code element.
- * @method long getCode() Gets the code element or NULL.
- * @property long $code Gets the code element or NULL.
+ * @method PartnerAPITypeProduct setCode(int $value) Sets the code element.
+ * @method int getCode() Gets the code element or NULL.
+ * @property int $code Gets the code element or NULL.
  *
  * @method PartnerAPITypeProduct setType(string $value) Sets the type element.
  * @method string getType() Gets the type element or NULL.

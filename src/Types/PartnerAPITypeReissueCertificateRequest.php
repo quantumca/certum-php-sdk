@@ -34,32 +34,32 @@ namespace Certum\Sdk\Types;
  * It is an extension to the PartnerAPITypeRequest class.
  *
  * @method PartnerAPITypeReissueCertificateRequest setSerialNumber(string $value) Sets the serialNumber element.
- * @method string getSerialNumber() Gets the serialNumber element or NULL.
- * @property string $serialNumber Gets the serialNumber element or NULL.
+ * @method string|null getSerialNumber() Gets the serialNumber element or NULL.
+ * @property string|null $serialNumber Gets the serialNumber element or NULL.
  *
  * @method PartnerAPITypeReissueCertificateRequest setX509Cert(string $value) Sets the X509Cert element.
- * @method string getX509Cert() Gets the X509Cert element or NULL.
- * @property string $X509Cert Gets the X509Cert element or NULL.
+ * @method string|null getX509Cert() Gets the X509Cert element or NULL.
+ * @property string|null $X509Cert Gets the X509Cert element or NULL.
  *
  * @method PartnerAPITypeReissueCertificateRequest setHashAlgorithm(string $value) Sets the hashAlgorithm element.
- * @method string getHashAlgorithm() Gets the hashAlgorithm element or NULL.
- * @property string $hashAlgorithm Gets the hashAlgorithm element or NULL.
+ * @method string|null getHashAlgorithm() Gets the hashAlgorithm element or NULL.
+ * @property string|null $hashAlgorithm Gets the hashAlgorithm element or NULL.
  *
  * @method PartnerAPITypeReissueCertificateRequest setCSR(string $value) Sets the CSR element.
- * @method string getCSR() Gets the CSR element or NULL.
- * @property string $CSR Gets the CSR element or NULL.
+ * @method string|null getCSR() Gets the CSR element or NULL.
+ * @property string|null $CSR Gets the CSR element or NULL.
  *
  * @method PartnerAPITypeReissueCertificateRequest setSANApprover(PartnerAPITypeSanApprover $value) Sets the SANApprover element.
- * @method PartnerAPITypeSanApprover getSANApprover() Gets the SANApprover element or NULL.
- * @property PartnerAPITypeSanApprover $SANApprover Gets the SANApprover element or NULL.
+ * @method PartnerAPITypeSanApprover|null getSANApprover() Gets the SANApprover element or NULL.
+ * @property PartnerAPITypeSanApprover|null $SANApprover Gets the SANApprover element or NULL.
  *
  * @method PartnerAPITypeReissueCertificateRequest setSANEntries(PartnerAPITypeSanEntries $value) Sets the SANEntries element.
- * @method PartnerAPITypeSanEntries getSANEntries() Gets the SANEntries element or NULL.
- * @property PartnerAPITypeSanEntries $SANEntries Gets the SANEntries element or NULL.
+ * @method PartnerAPITypeSanEntries|null getSANEntries() Gets the SANEntries element or NULL.
+ * @property PartnerAPITypeSanEntries|null $SANEntries Gets the SANEntries element or NULL.
  *
  * @method PartnerAPITypeReissueCertificateRequest setUserAgent(string $value) Sets the UserAgent element.
- * @method string getUserAgent() Gets the UserAgent element or NULL.
- * @property string $userAgent Gets the UserAgent element or NULL.
+ * @method string|null getUserAgent() Gets the UserAgent element or NULL.
+ * @property string|null $userAgent Gets the UserAgent element or NULL.
  *
  * @package types
  */

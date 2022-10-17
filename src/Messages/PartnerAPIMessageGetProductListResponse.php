@@ -34,7 +34,7 @@ class PartnerAPIMessageGetProductListResponse extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'getProductListResponse':PartnerAPITypeGetProductListResponse}
      */
     protected function initParts()
     {

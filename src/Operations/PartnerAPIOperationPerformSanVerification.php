@@ -36,11 +36,13 @@ class PartnerAPIOperationPerformSanVerification extends PartnerAPIOperation
      * @var PartnerAPIMessagePerformSanVerification
      */
     protected $_input = null;
-/**
+
+    /**
      * @var PartnerAPIMessagePerformSanVerificationResponse
      */
     protected $_output = null;
-/**
+
+    /**
      * @var string
      */
     protected $_operation = 'performSanVerification';

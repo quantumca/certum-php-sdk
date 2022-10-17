@@ -43,7 +43,7 @@ class PartnerAPIMessageAddEmailVerification extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'addEmailVerification':PartnerAPITypeAddEmailVerificationRequest}
      */
     protected function initParts()
     {

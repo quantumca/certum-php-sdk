@@ -11,6 +11,7 @@ namespace Certum\Sdk\Operations;
 
 use Certum\Sdk\Messages\PartnerAPIMessageGetOrderState;
 use Certum\Sdk\Messages\PartnerAPIMessageGetOrderStateResponse;
+use Certum\Sdk\Types\PartnerAPITypeOrderVerification;
 
 /*
 <operation name="getOrderState" parameterOrder="getOrderState">
@@ -99,7 +100,7 @@ class PartnerAPIOperationGetOrderState extends PartnerAPIOperation
      * If there is no order in the response an empty array is returned.
      * Otherwise, an array with one or more orders is returned.
      *
-     * @return PartnerAPITypeOrderVerification[]
+     * @return array<int,PartnerAPITypeOrderVerification>
      */
     public function getOrderVerifications()
     {

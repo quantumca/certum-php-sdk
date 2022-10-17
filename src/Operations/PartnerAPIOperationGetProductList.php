@@ -11,6 +11,7 @@ namespace Certum\Sdk\Operations;
 
 use Certum\Sdk\Messages\PartnerAPIMessageGetProductList;
 use Certum\Sdk\Messages\PartnerAPIMessageGetProductListResponse;
+use Certum\Sdk\Types\PartnerAPITypeProduct;
 
 /*
 <operation name="getProductList" parameterOrder="getProductList">
@@ -81,7 +82,7 @@ class PartnerAPIOperationGetProductList extends PartnerAPIOperation
      * The following properties are set for each product: code, type and
      * validityPeriod.
      *
-     * @return PartnerAPITypeProduct[]
+     * @return array<int,PartnerAPITypeProduct>
      */
     public function getProducts()
     {

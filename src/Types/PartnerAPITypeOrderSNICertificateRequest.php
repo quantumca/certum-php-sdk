@@ -31,20 +31,20 @@ namespace Certum\Sdk\Types;
  * It is an extension to the PartnerAPITypeRequest class.
  *
  * @method PartnerAPITypeOrderSNICertificateRequest setOrderSNIParameters(PartnerAPITypeOrderSNIParameters $value) Sets the orderSNIParameters element.
- * @method PartnerAPITypeOrderSNIParameters getOrderSNIParameters() Gets the orderSNIParameters element.
- * @property PartnerAPITypeOrderSNIParameters $orderSNIParameters Gets the orderSNIParameters element.
+ * @method PartnerAPITypeOrderSNIParameters|null getOrderSNIParameters() Gets the orderSNIParameters element.
+ * @property PartnerAPITypeOrderSNIParameters|null $orderSNIParameters Gets the orderSNIParameters element.
  *
  * @method PartnerAPITypeOrderSNICertificateRequest setSerialNumbers(PartnerAPITypeSerialNumbers $value) Sets the serialNumbers element.
- * @method PartnerAPITypeSerialNumbers getSerialNumbers() Gets the serialNumbers element.
- * @property PartnerAPITypeSerialNumbers $serialNumbers Gets the serialNumbers element.
+ * @method PartnerAPITypeSerialNumbers|null getSerialNumbers() Gets the serialNumbers element.
+ * @property PartnerAPITypeSerialNumbers|null $serialNumbers Gets the serialNumbers element.
  *
  * @method PartnerAPITypeOrderSNICertificateRequest setRequestorInfo(PartnerAPITypeRequestorInfo $value) Sets the requestorInfo element.
- * @method PartnerAPITypeRequestorInfo getRequestorInfo() Gets the requestorInfo element.
- * @property PartnerAPITypeRequestorInfo $requestorInfo Gets the requestorInfo element.
+ * @method PartnerAPITypeRequestorInfo|null getRequestorInfo() Gets the requestorInfo element.
+ * @property PartnerAPITypeRequestorInfo|null $requestorInfo Gets the requestorInfo element.
  *
  * @method PartnerAPITypeOrderSNICertificateRequest setOrganizationInfo(PartnerAPITypeOrganizationInfo $value) Sets the organizationInfo element.
- * @method PartnerAPITypeOrganizationInfo getOrganizationInfo() Gets the organizationInfo element or NULL.
- * @property PartnerAPITypeOrganizationInfo $organizationInfo Gets the organizationInfo element or NULL.
+ * @method PartnerAPITypeOrganizationInfo|null getOrganizationInfo() Gets the organizationInfo element or NULL.
+ * @property PartnerAPITypeOrganizationInfo|null $organizationInfo Gets the organizationInfo element or NULL.
  *
  * @package types
  */

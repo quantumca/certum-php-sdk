@@ -34,7 +34,7 @@ class PartnerAPIMessageGetConfigurationResponse extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'getConfigurationResponse':PartnerAPITypeGetConfigurationResponse}
      */
     protected function initParts()
     {

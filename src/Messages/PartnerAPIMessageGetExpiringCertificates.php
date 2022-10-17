@@ -42,7 +42,7 @@ class PartnerAPIMessageGetExpiringCertificates extends PartnerAPIMessage
     /**
      * This method returns initial data for the message's parts.
      *
-     * @return array
+     * @return array{'getExpiringCertificates':PartnerAPITypeGetExpiringCertificatesRequest}
      */
     protected function initParts()
     {

@@ -32,24 +32,24 @@ namespace Certum\Sdk\Types;
  * It is an extension to the PartnerAPITypeRequest class.
  *
  * @method PartnerAPITypeOrderRequest setSANApprover(PartnerAPITypeSanApprover $value) Sets the SANApprover element.
- * @method PartnerAPITypeSanApprover getSANApprover() Gets the SANApprover element or NULL.
- * @property PartnerAPITypeSanApprover $SANApprover Gets the SANApprover element or NULL.
+ * @method PartnerAPITypeSanApprover|null getSANApprover() Gets the SANApprover element or NULL.
+ * @property PartnerAPITypeSanApprover|null $SANApprover Gets the SANApprover element or NULL.
  *
  * @method PartnerAPITypeOrderRequest setOrderParameters(PartnerAPITypeOrderParameters $value) Sets the orderParameters element.
- * @method PartnerAPITypeOrderParameters getOrderParameters() Gets the orderParameters element.
- * @property PartnerAPITypeOrderParameters $orderParameters Gets the orderParameters element.
+ * @method PartnerAPITypeOrderParameters|null getOrderParameters() Gets the orderParameters element.
+ * @property PartnerAPITypeOrderParameters|null $orderParameters Gets the orderParameters element.
  *
  * @method PartnerAPITypeOrderRequest setOrganizationInfo(PartnerAPITypeOrganizationInfo $value) Sets the organizationInfo element.
- * @method PartnerAPITypeOrganizationInfo getOrganizationInfo() Gets the organizationInfo element or NULL.
- * @property PartnerAPITypeOrganizationInfo $organizationInfo Gets the organizationInfo element or NULL.
+ * @method PartnerAPITypeOrganizationInfo|null getOrganizationInfo() Gets the organizationInfo element or NULL.
+ * @property PartnerAPITypeOrganizationInfo|null $organizationInfo Gets the organizationInfo element or NULL.
  *
  * @method PartnerAPITypeOrderRequest setRequestorInfo(PartnerAPITypeRequestorInfo $value) Sets the requestorInfo element.
- * @method PartnerAPITypeRequestorInfo getRequestorInfo() Gets the requestorInfo element.
- * @property PartnerAPITypeRequestorInfo $requestorInfo Gets the requestorInfo element.
+ * @method PartnerAPITypeRequestorInfo|null getRequestorInfo() Gets the requestorInfo element.
+ * @property PartnerAPITypeRequestorInfo|null $requestorInfo Gets the requestorInfo element.
  *
  * @method PartnerAPITypeOrderRequest setSANEntries(PartnerAPITypeSanEntries $value) Sets the SANEntries element.
- * @method PartnerAPITypeSanEntries getSANEntries() Gets the SANEntries element or NULL.
- * @property PartnerAPITypeSanEntries $SANEntries Gets the SANEntries element or NULL.
+ * @method PartnerAPITypeSanEntries|null getSANEntries() Gets the SANEntries element or NULL.
+ * @property PartnerAPITypeSanEntries|null $SANEntries Gets the SANEntries element or NULL.
  *
  * @package types
  */

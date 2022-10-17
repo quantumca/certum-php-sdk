@@ -4,6 +4,7 @@ namespace Certum\Sdk\Operations;
 
 use Certum\Sdk\Messages\PartnerAPIMessageGetConfiguration;
 use Certum\Sdk\Messages\PartnerAPIMessageGetConfigurationResponse;
+use Certum\Sdk\Types\PartnerAPITypeProduct;
 
 /**
  * Partner API Library
