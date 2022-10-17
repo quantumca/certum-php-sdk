@@ -133,7 +133,7 @@ abstract class PartnerAPIType
                     if (in_array($props['type'], array('string', 'int', 'long', 'boolean'))) {
                         $arg = array($v);
                     } else {
-                        $newElement = new $props['type']();
+                        $newElement = new ('\\Certum\\Sdk\\Types\\' . $props['type'])();
                         $newElement->setData($v);
                         $arg = array($newElement);
                     }
@@ -268,10 +268,10 @@ abstract class PartnerAPIType
                 $value = (int) $arg;
             } elseif ($props['type'] == 'boolean') {
                 $value = (bool) $arg;
-            } elseif (is_object($arg) && (get_class($arg) == $props['type'])) {
+            } elseif (is_object($arg) && (get_class($arg) == 'Certum\\Sdk\\Types\\' . $props['type'])) {
                 $value = $arg;
             } else {
-                throw new PartnerAPIException("The element '$element' has to be set with an object of type " . $props['type'] . ".");
+                throw new PartnerAPIException("The element '$element' (" . get_class($arg) . ") has to be set with an object of type " . 'Certum\\Sdk\\Types\\' . $props['type'] . ".");
             }
         }
         $this->elems[$element]['value'] = $value;
@@ -323,10 +323,10 @@ abstract class PartnerAPIType
                     $value = (int) $arg;
                 } elseif ($props['type'] == 'boolean') {
                     $value = (bool) $arg;
-                } elseif (is_object($arg) && (get_class($arg) == $props['type'])) {
+                } elseif (is_object($arg) && (get_class($arg) == 'Certum\\Sdk\\Types\\' . $props['type'])) {
                     $value = $arg;
                 } else {
-                    throw new PartnerAPIException("The element '$element' has to be set with an object of type " . $props['type'] . ".");
+                    throw new PartnerAPIException("The element '$element' (" . get_class($arg) . ") has to be set with an object of type " . 'Certum\\Sdk\\Types\\' . $props['type'] . ".");
                 }
             }
         } elseif (!$props['nillable'] && is_null($props['value'])) {

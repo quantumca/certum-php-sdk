@@ -11,6 +11,7 @@ namespace Certum\Sdk\Operations;
 
 use Certum\Sdk\Messages\PartnerAPIMessageGetOrdersByDateRange;
 use Certum\Sdk\Messages\PartnerAPIMessageGetOrdersByDateRangeResponse;
+use Certum\Sdk\Types\PartnerAPITypeOrder;
 use Certum\Sdk\Types\PartnerAPITypeOrderOption;
 
 /*

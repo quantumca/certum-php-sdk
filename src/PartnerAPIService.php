@@ -258,6 +258,28 @@ class PartnerAPIService
     }
 
     /**
+     * Sets the current URL for test WSDL.
+     *
+     * @return PartnerAPIService The object being called
+     */
+    public function setWSDLTest()
+    {
+        $this->_wsdl = PartnerAPIService::WSDL_TEST;
+        return $this;
+    }
+
+    /**
+     * Sets the current URL for test WSDL.
+     *
+     * @return PartnerAPIService The object being called
+     */
+    public function setWSDLProd()
+    {
+        $this->_wsdl = PartnerAPIService::WSDL_PROD;
+        return $this;
+    }
+
+    /**
      * Configures the service to pass or to catch SoapFault exceptions.
      *
      * If SoapFault exceptions are catched they are rethrown as PartnerAPIException.
@@ -381,7 +403,7 @@ class PartnerAPIService
     /**
      * Returns an object representing the getOrderByOrderID operation.
      *
-     * @return PartnerAPIOperationGetOrderByOrderID
+     * @return PartnerAPIOperationGetOrdersByDateRange
      */
     public function operationGetOrdersByDateRange()
     {
